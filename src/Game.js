@@ -1,11 +1,3 @@
-/*
- * Copyright 2017 The boardgame.io Authors
- *
- * Use of this source code is governed by a MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- */
-
 function IsVictory(cells) {
     const positions = [
       [0, 1, 2],
@@ -27,11 +19,12 @@ function IsVictory(cells) {
 }
 
 // Return true if all `cells` are occupied.
-function IsDraw(cells) {
-    return cells.filter(c => c === null).length === 0;
+const IsDraw = (cells) => {
+     return cells.filter(c => c === null).length === 0;
 }
   
   const TicTacToe = {
+
     name: "tic-tac-toe",
   
     setup: () => ({
@@ -52,7 +45,7 @@ function IsDraw(cells) {
       if (IsVictory(G.cells)) {
         return { winner: ctx.currentPlayer };
       }
-      if (G.cells.filter(c => c === null).length === 0) {
+      if (IsDraw(G.cells)) {
         return { draw: true };
       }
     },
