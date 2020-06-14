@@ -24,7 +24,12 @@ function IsVictory(cells) {
     };
   
     return positions.map(isRowComplete).some(i => i === true);
-  }
+}
+
+// Return true if all `cells` are occupied.
+function IsDraw(cells) {
+    return cells.filter(c => c === null).length === 0;
+}
   
   const TicTacToe = {
     name: "tic-tac-toe",
