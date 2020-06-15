@@ -23,7 +23,7 @@ const IsDraw = (cells) => {
      return cells.filter(c => c === null).length === 0;
 }
   
-  const TicTacToe = {
+const TicTacToe = {
 
     name: "tic-tac-toe",
   
@@ -61,7 +61,7 @@ const IsDraw = (cells) => {
         return moves;
       }
     }
-  };
+};
   
-  export default TicTacToe;
+export default TicTacToe;
   
