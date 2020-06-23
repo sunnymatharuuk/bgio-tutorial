@@ -25,7 +25,7 @@ const IsDraw = (cells) => {
   
 const TicTacToe = {
 
-    name: "tic-tac-toe",
+    name: "TicTacToe",
   
     setup: () => ({
       cells: Array(9).fill(null)

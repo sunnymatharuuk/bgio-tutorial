@@ -9,6 +9,7 @@ const TicTacToeClient = Client({
   game: TicTacToe,
   board: TicTacToeBoard,
   //multiplayer: Local(),
+  debug: false,
   multiplayer: SocketIO({ server: 'localhost:8000' }),
 });
 
